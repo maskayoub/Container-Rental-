@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>Conteneur</display-name>
+  <servlet>
+  	<servlet-name>cs</servlet-name>
+  	<servlet-class>web.ControleurServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>cs</servlet-name>
+  	<url-pattern>*.php</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>CewolfServlet</servlet-name>
+    <servlet-class>de.laures.cewolf.CewolfRenderer</servlet-class>
+    <init-param>
+<param-name>storage</param-name>
+<param-value>de.laures.cewolf.storage.TransientSessionStorage</param-value>
+ 
+</init-param>
+ 
+<!-- turn on or off debugging logging -->
+ 
+<init-param>
+<param-name>debug</param-name>
+<param-value>true</param-value>
+ 
+</init-param>
+ 
+</servlet>
+</web-app>
